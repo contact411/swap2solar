@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sun Jul 05 2015 05:14:23 GMT+0000 (UTC) -->
+<html data-wf-site="555001cfea1dbd76158620d9" data-wf-page="555001cfea1dbd76158620db">
+<head>
+  <meta charset="utf-8">
+  <title>Swap 2 Solar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/swap2solar.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/sunmain.png">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+  <div class="w-section header-section">
+    <div class="w-container">
+      <h1>Swap 2 solar</h1>
+      <p>Solar is a sustainable energy source and an alternative to fossil fuels. The first solar cell was constructed by Charles Fritts in the 1880's. 230 plus years later, energy produced by solar is still a fraction of all energy consumed globally.
+        <br>
+        <br>Our team chose to create a solar calculator that enables and empowers individuals to make an informed choice to answer the question ‘why’ they should choose to switch based on the financial savings along with reducing their carbon footprint.</p>
+      <div class="content-wrapper">
+        <h2>SEE&nbsp;HOW&nbsp;MUCH&nbsp;YOU&nbsp;CAN&nbsp;SAVE</h2>
+        <div class="w-form sign-up-form">
+          <form class="w-clearfix" name="wf-form-signup-form" data-name="Signup Form">
+            <input class="w-input field" id="Post-Code" type="text" placeholder="Post Code" name="Post-Code" required="required" data-name="Post Code" postcode="postcode">
+            <input class="w-button button" type="submit" value="Start Saving!" data-wait="Please wait...">
+          </form>
+          <div class="w-form-done success-message">
+            <p>Your Energy Savings per Month will be <strong>$350</strong>&nbsp;</p>
+            <div class="chart" id="chart">
+              <div class="w-embed w-script">
+                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+                <div class='tableauPlaceholder' style='width: 904px; height: 669px;'>
+                  <noscript>
+                    <a href='#'><img alt='Chart of Electrity consumption by time of day ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sw&#47;Swap2solar&#47;ChartofElectrityconsumptionbytimeofday&#47;1_rss.png' style='border: none' />
+                    </a>
+                  </noscript>
+                  <object class='tableauViz' width='904' height='669' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Swap2solar&#47;ChartofElectrityconsumptionbytimeofday' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sw&#47;Swap2solar&#47;ChartofElectrityconsumptionbytimeofday&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='showVizHome' value='no' />
+                    <param name='showTabs' value='y' />
+                    <param name='bootstrapWhenNotified' value='true' />
+                  </object>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-form-fail error-message">
+            <p>Oops! Something went wrong while submitting the form. :(</p>
+          </div>
+        </div>
+        <div class="w-embed w-script">
+          <script>
+            $(function () {
+                $('#Highchart').highcharts({
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: 'Efficiency Optimization by Branch'
+                    },
+                    xAxis: {
+                        categories: [
+                            'Seattle HQ',
+                            'San Francisco',
+                            'Tokyo'
+                        ]
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: 'Employees'
+                        }
+                    }, {
+                        title: {
+                            text: 'Profit (millions)'
+                        },
+                        opposite: true
+                    }],
+                    legend: {
+                        shadow: false
+                    },
+                    tooltip: {
+                        shared: true
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        }
+                    },
+                    series: [{
+                        name: 'Employees',
+                        color: 'rgba(165,170,217,1)',
+                        data: [150, 73, 20],
+                        pointPadding: 0.3,
+                        pointPlacement: -0.2
+                    }, {
+                        name: 'Employees Optimized',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [140, 90, 40],
+                        pointPadding: 0.4,
+                        pointPlacement: -0.2
+                    }, {
+                        name: 'Profit',
+                        color: 'rgba(248,161,63,1)',
+                        data: [183.6, 178.8, 198.5],
+                        tooltip: {
+                            valuePrefix: '$',
+                            valueSuffix: ' M'
+                        },
+                        pointPadding: 0.3,
+                        pointPlacement: 0.2,
+                        yAxis: 1
+                    }, {
+                        name: 'Profit Optimized',
+                        color: 'rgba(186,60,61,.9)',
+                        data: [203.6, 198.8, 208.5],
+                        tooltip: {
+                            valuePrefix: '$',
+                            valueSuffix: ' M'
+                        },
+                        pointPadding: 0.4,
+                        pointPlacement: 0.2,
+                        yAxis: 1
+                    }]
+                });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
